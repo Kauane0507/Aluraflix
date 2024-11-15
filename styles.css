@@ -1,0 +1,156 @@
+/* Reseta e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #E50914;
+    margin-bottom: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+header:hover {
+    color: #FF9900;
+}
+
+.chamada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: linear-gradient(135deg, #E50914, #FF9900);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    max-width: 800px;
+    width: 100%;
+}
+
+.chamada h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chamada p {
+    color: #FFE500;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.chamada iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.chamada iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+/* Seção de Categorias */
+.categoria {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.categoria h2 {
+    font-size: 2rem;
+    color: #FF9900;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.categoria-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.categoria-videos a {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categoria-videos a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.6);
+}
+
+.categoria-videos a img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-videos a img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        font-size: 2rem;
+    }
+
+    .chamada h1 {
+        font-size: 2rem;
+    }
+
+    .chamada p {
+        font-size: 1rem;
+    }
+
+    .categoria h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chamada {
+        padding: 15px;
+    }
+
+    .chamada iframe {
+        height: 240px;
+    }
+
+    .categoria h2 {
+        font-size: 1.5rem;
+    }
+
+    .categoria-videos {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
